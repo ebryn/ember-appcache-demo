@@ -1,1 +1,35 @@
-{{outlet}}
+<div class="schedule">
+  <header class="row global-nav">
+    <div class="small-10 small-centered medium-9 large-3 large-offset-1 large-uncentered columns logo-container">
+      <a href="index.html" class="logo" title="Go to the EmberConf 2016 Homepage"><span class="hide">EmberConf 2016</span></a>
+      <a href="#footer" class="menu-button small-button round">Menu</a>
+    </div>
+      <div class="nameplate small-12 small-centered medium-9 large-7 large-uncentered columns end">
+      <div class="event-cta">
+        <h3><span class="date">March 28, 29 &amp; 30</span><br> <span class="location"> Portland, OR</span></h3>
+        <a href="register.html" class="register-button round small-button">Register</a>
+      </div>
+      <nav>
+        <a href="speakers.html" id="nav-speakers">Speakers</a>
+        <a href="schedule.html" id="nav-schedule">Schedule</a>
+        <a href="about.html" id="nav-about">About</a>
+        <a href="location-and-hotels.html" id="nav-location-and-hotels">Location &amp; Hotels</a>
+        <a href="sponsors.html" id="nav-xsponsors">Sponsors</a>
+      </nav>
+    </div>
+  </header>
+  <section class="day-nav row centered collapse">
+    <ul class="small-12 columns">
+      <li>
+        <a href="#pre-conf-activities" class="active">Pre-Conf Activities</a>
+      </li>
+      <li>
+        <a href="#day-1" class="">Day 1</a>
+      </li>
+      <li>
+        <a href="#day-2" class="">Day 2</a>
+      </li>
+    </ul>
+  </section>
+  {{outlet}}
+</div>

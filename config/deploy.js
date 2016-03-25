@@ -8,9 +8,48 @@ module.exports = function(deployTarget) {
     'html-manifest': {
       filename: 'manifest.appcache',
       // prependPath: 'https://mycdn.com/',
-      excludePaths: ['index.html'],
+      excludePaths: [
+        'index.html',
+        'images/bio-alex-blom.jpeg',
+        'images/bio-bear-douglas.jpg',
+        'images/bio-brenna-obrien.jpg',
+        'images/bio-brigitte-warner.jpg',
+        'images/bio-chad-hietala.jpg',
+        'images/bio-charles-lowell.jpg',
+        'images/bio-chris-ball.jpeg',
+        'images/bio-chris-lopresto.jpg',
+        'images/bio-estelle-deblois.jpg',
+        'images/bio-felix-rieseberg.png',
+        'images/bio-godfrey-chan.png',
+        'images/bio-igor-terzic.jpg',
+        'images/bio-ivan-vanderbyl.jpg',
+        'images/bio-jade-applegate.jpg',
+        'images/bio-james-kyle.jpg',
+        'images/bio-john-kleinschmidt.jpg',
+        'images/bio-ju-liu.jpg',
+        'images/bio-katie-gengler.jpg',
+        'images/bio-kelly-senna.png',
+        'images/bio-lauren-tan.jpg',
+        'images/bio-leah-silber.jpg',
+        'images/bio-lisa-gringl.png',
+        'images/bio-liz-baillie.jpg',
+        'images/bio-matt-beale.png',
+        'images/bio-matt-mckenna.png',
+        'images/bio-mike-pack.jpg',
+        'images/bio-nate-bibler.jpeg',
+        'images/bio-oren-teich.jpg',
+        'images/bio-ray-tiley.jpg',
+        'images/bio-stef-penner.jpg',
+        'images/bio-toran-billups.jpeg',
+        'images/bio-vaidehi-joshi.png',
+        'images/bio-xavier-cambar.jpeg',
+        'images/bio-yehuda-katz.jpg'
+      ],
       // includePaths: ['/mobile/'],
-      network: ['*']
+      network: ['*'],
+      manifestRoot: function() {
+        return '';
+      }
     }
   };
 

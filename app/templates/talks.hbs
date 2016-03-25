@@ -1,29 +1,27 @@
-<div class="schedule">
-  <section class="day">
-    <ol class="row">
-      {{#each model as |talk|}}
-        {{#if talk.title}}
-          <li class="small-12 columns accordion">
-            <div class="row small-collapse medium-uncollapse">
-                <div class="event-time small-12 medium-4 columns">
-                  <p>{{talk.time}}</p>
+<section class="day">
+  <ol class="row">
+    {{#each model as |talk|}}
+      {{#if talk.title}}
+        <li class="small-12 columns accordion">
+          <div class="row small-collapse medium-uncollapse">
+              <div class="event-time small-12 medium-4 columns">
+                <p>{{talk.time}}</p>
+              </div>
+            <div class="event-info small-12 medium-8 columns">
+              {{#if talk.imageUrl}}
+                <div class="img wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                  <img src="{{talk.imageUrl}}" alt={{talk.title}} class="round">
                 </div>
-              <div class="event-info small-12 medium-8 columns">
-                {{#if talk.imageUrl}}
-                  <div class="img wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
-                    <img src="http://emberconf.com/{{talk.imageUrl}}" alt={{talk.title}} class="round">
-                  </div>
-                {{/if}}
-                <h3>{{talk.title}}</h3>
-                <p><a href="/speakers.html#charles-lowell">{{talk.speaker}}</a></p>
-                <div class="accordion-content">
-                  <p><em>Immutability</em>. It may sound like an ominous something from the far-off galaxy of math, but in practice, it's one of the most pragmatic tools for thinking about UI.</p><p>In this talk we'll explore the problems that an immutable style solves, and how you can use it as a thought-tool to both design and implement more powerful and composable components.</p><p>Throughout we'll see just how deeply Ember supports this mode of thought at every step of the way.</p>
-                </div>
+              {{/if}}
+              <h3>{{talk.title}}</h3>
+              <p><a href="/speakers.html#charles-lowell">{{talk.speaker}}</a></p>
+              <div class="accordion-content">
+                <p><em>Immutability</em>. It may sound like an ominous something from the far-off galaxy of math, but in practice, it's one of the most pragmatic tools for thinking about UI.</p><p>In this talk we'll explore the problems that an immutable style solves, and how you can use it as a thought-tool to both design and implement more powerful and composable components.</p><p>Throughout we'll see just how deeply Ember supports this mode of thought at every step of the way.</p>
               </div>
             </div>
-          </li>
-        {{/if}}
-      {{/each}}
-    </ol>
-  </section>
-</div>
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+</section>
