@@ -4,11 +4,18 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    fingerprint: {
-      exclude: ['images/']
-    }
 
-    // Add options here
+    // appshell is responsible for deciding when to run our app, so no autorun
+    autoRun: false,
+
+    // appshell brings its own loader, because it needs to manage
+    // ambiguities between multiple versions of the app that may
+    // attempt to load in parallel.
+    _ignoreMissingLoader: true,
+
+    fingerprint: {
+      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2']
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

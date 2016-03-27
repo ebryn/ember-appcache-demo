@@ -1,55 +1,66 @@
 /* jshint node: true */
 
+var AWS = require('aws-sdk');
+var _ = require('lodash');
+
 module.exports = function(deployTarget) {
+  var credentials = AWS.config.keys.credentials();
+  if (!credentials.secretAccessKey) {
+    throw new Error("Unable to find AWS credentials. ");
+  }
+
+  var s3CommonOptions = {
+    accessKeyId: credentials.accessKeyId,
+    secretAccessKey: credentials.secretAccessKey,
+    region: 'us-east-1',
+    bucket: 'appcache-demo.eaf4.com'
+  };
+
   var ENV = {
     build: {},
-    // include other plugin configuration that applies to all deploy targets here
+    plugins: ['appshell', 'build', 'display-revisions', 'manifest', 'revision-data', 's3', 's3-index', 's3-index:s3-index-manifest', 's3-index:s3-index-appshell'],
 
-    'html-manifest': {
-      filename: 'manifest.appcache',
-      // prependPath: 'https://mycdn.com/',
-      excludePaths: [
-        'index.html',
-        'images/bio-alex-blom.jpeg',
-        'images/bio-bear-douglas.jpg',
-        'images/bio-brenna-obrien.jpg',
-        'images/bio-brigitte-warner.jpg',
-        'images/bio-chad-hietala.jpg',
-        'images/bio-charles-lowell.jpg',
-        'images/bio-chris-ball.jpeg',
-        'images/bio-chris-lopresto.jpg',
-        'images/bio-estelle-deblois.jpg',
-        'images/bio-felix-rieseberg.png',
-        'images/bio-godfrey-chan.png',
-        'images/bio-igor-terzic.jpg',
-        'images/bio-ivan-vanderbyl.jpg',
-        'images/bio-jade-applegate.jpg',
-        'images/bio-james-kyle.jpg',
-        'images/bio-john-kleinschmidt.jpg',
-        'images/bio-ju-liu.jpg',
-        'images/bio-katie-gengler.jpg',
-        'images/bio-kelly-senna.png',
-        'images/bio-lauren-tan.jpg',
-        'images/bio-leah-silber.jpg',
-        'images/bio-lisa-gringl.png',
-        'images/bio-liz-baillie.jpg',
-        'images/bio-matt-beale.png',
-        'images/bio-matt-mckenna.png',
-        'images/bio-mike-pack.jpg',
-        'images/bio-nate-bibler.jpeg',
-        'images/bio-oren-teich.jpg',
-        'images/bio-ray-tiley.jpg',
-        'images/bio-stef-penner.jpg',
-        'images/bio-toran-billups.jpeg',
-        'images/bio-vaidehi-joshi.png',
-        'images/bio-xavier-cambar.jpeg',
-        'images/bio-yehuda-katz.jpg'
+    s3: _.defaults({
+      filePattern: '**/*.{js,css,png,gif,ico,jpg,jpeg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,ttc,csv}'
+    }, s3CommonOptions),
+
+    's3-index': _.defaults({
+      allowOverwrite: true
+    }, s3CommonOptions),
+
+    's3-index-manifest': _.defaults({
+      filePattern: 'manifest.appcache',
+      allowOverwrite: true
+    }, s3CommonOptions),
+
+    's3-index-appshell': _.defaults({
+      filePattern: 'appshell.html',
+      allowOverwrite: true
+    }, s3CommonOptions),
+
+    appshell: {
+      excludePattern: '{robots.txt,crossdomain.xml}',
+      externalDependencies: [
+        // Google fonts are a little slippery, you need to keep
+        // hitting the CSS endpoint with different user agents to try
+        // to flush out all the variations.
+        'http://fonts.googleapis.com/css?family=Poppins:400,700',
+        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESAzyDMXhdD8sAj6OAJTFsBI.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESBsxEYwM7FgeyaSgU71cLG0.woff',
+        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESC3USBnSvpkopQaUR-2r7iU.ttf',
+        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/Aul8cxPpbm96Ali7smyVfCEAvth_LlrfE80CYdSH47w.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/F4YWuALHubF63LLQPw0rMfY6323mHUZFJMgTvxaG2iE.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/HLBysyo0MQBO_7E-DWLwzg.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/SFusu2OSFiUt40t5QNWvnA.woff',
+        'http://fonts.gstatic.com/s/poppins/v1/TDTjCH39JjVycIF24TlO-Q.ttf',
+        'http://fonts.gstatic.com/s/poppins/v1/aDjpMND83pDErGXlVEr-SSEAvth_LlrfE80CYdSH47w.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/gG8m82oGcrBJF727xHU04fY6323mHUZFJMgTvxaG2iE.woff2',
+        'http://fonts.gstatic.com/s/poppins/v1/ePBp1XdWMQqYWkm0HYfk2gLUuEpTyoUstqEm5AMlJo4.woff',
+        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESL3hpw3pgy2gAi-Ip7WPMi0.woff'
       ],
-      // includePaths: ['/mobile/'],
-      network: ['*'],
-      manifestRoot: function() {
-        return '';
-      }
+      prefixDomains: {}
     }
   };
 
