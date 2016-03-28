@@ -1,9 +1,11 @@
 CACHE MANIFEST
-# Mon Mar 28 2016 18:24:43 GMT-0400 (EDT)
-assets/ember-appcache-demo-0da7f3defa5795cdbd546830779df8cd.js
-assets/ember-appcache-demo-8b4613ea7e7fa99f24118d301cf99fb9.css
+# Mon Mar 28 2016 18:59:45 GMT-0400 (EDT)
+assets/ember-appcache-demo-b192f585b2ab4f2c1b0f7f7e6df4b059.css
+assets/ember-appcache-demo-dd5ab841c75e556fdbd687e49694e0a2.js
 assets/vendor-969bd6f07c2bff409cffe8aed5318b1d.js
 assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css
+fonts/Poppins-Bold-89124a828cd3179d84f1b60f03b0ece6.woff
+fonts/Poppins-Regular-fbec8733366f4257601ebdadcfddfaca.woff
 images/bio-alex-blom-d4d6b9cca75b3f2a0c7aff2b54e16cda.jpeg
 images/bio-bear-douglas-03750730a2d238fa465bd9f70cdfea19.jpg
 images/bio-brenna-obrien-a86918607adc958e22cc883854913ffa.jpg
@@ -43,20 +45,5 @@ images/emberconf-logo@2x-afb14dbdc667a8c6ba3d664f6061f32c.png
 images/tomster-89559e1ddd37d758dcba135987434342.png
 images/tomster@2x-fcdfa56168ed94dc7ffc708e7eb818aa.png
 index.html
-http://fonts.googleapis.com/css?family=Poppins:400,700
-http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESAzyDMXhdD8sAj6OAJTFsBI.woff2
-http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESBsxEYwM7FgeyaSgU71cLG0.woff
-http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESC3USBnSvpkopQaUR-2r7iU.ttf
-http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2
-http://fonts.gstatic.com/s/poppins/v1/Aul8cxPpbm96Ali7smyVfCEAvth_LlrfE80CYdSH47w.woff2
-http://fonts.gstatic.com/s/poppins/v1/F4YWuALHubF63LLQPw0rMfY6323mHUZFJMgTvxaG2iE.woff2
-http://fonts.gstatic.com/s/poppins/v1/HLBysyo0MQBO_7E-DWLwzg.woff2
-http://fonts.gstatic.com/s/poppins/v1/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2
-http://fonts.gstatic.com/s/poppins/v1/SFusu2OSFiUt40t5QNWvnA.woff
-http://fonts.gstatic.com/s/poppins/v1/TDTjCH39JjVycIF24TlO-Q.ttf
-http://fonts.gstatic.com/s/poppins/v1/aDjpMND83pDErGXlVEr-SSEAvth_LlrfE80CYdSH47w.woff2
-http://fonts.gstatic.com/s/poppins/v1/gG8m82oGcrBJF727xHU04fY6323mHUZFJMgTvxaG2iE.woff2
-http://fonts.gstatic.com/s/poppins/v1/ePBp1XdWMQqYWkm0HYfk2gLUuEpTyoUstqEm5AMlJo4.woff
-http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESL3hpw3pgy2gAi-Ip7WPMi0.woff
 NETWORK:
 *
