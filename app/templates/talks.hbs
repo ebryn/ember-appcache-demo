@@ -1,3 +1,16 @@
+<section class="day-nav row centered collapse">
+  <ul class="small-12 columns">
+    <li>
+      <a href="#pre-conf-activities" class="active">Pre-Conf Activities</a>
+    </li>
+    <li>
+      <a href="#day-1" class="">Day 1</a>
+    </li>
+    <li>
+      <a href="#day-2" class="">Day 2</a>
+    </li>
+  </ul>
+</section>
 <section class="day">
   {{#each model as |day|}}
     <div class="row" id={{day.id}}>
@@ -8,7 +21,7 @@
     </div>
     <ol class="row">
       {{#each day.talks as |talk|}}
-        <li class="small-12 columns accordion">
+        {{#link-to 'talk' day.id talk.id tagName='li' class='small-12 columns accordion'}}
           <div class="row small-collapse medium-uncollapse">
               <div class="event-time small-12 medium-4 columns">
                 <p>{{talk.time}}</p>
@@ -26,7 +39,7 @@
               </div>
             </div>
           </div>
-        </li>
+        {{/link-to}}
       {{/each}}
     </ol>
   {{/each}}
