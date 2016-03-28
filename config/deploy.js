@@ -1,42 +1,9 @@
 /* jshint node: true */
 
-var AWS = require('aws-sdk');
-var _ = require('lodash');
 
 module.exports = function(deployTarget) {
-  var credentials = AWS.config.keys.credentials();
-  if (!credentials.secretAccessKey) {
-    throw new Error("Unable to find AWS credentials. ");
-  }
-
-  var s3CommonOptions = {
-    accessKeyId: credentials.accessKeyId,
-    secretAccessKey: credentials.secretAccessKey,
-    region: 'us-east-1',
-    bucket: 'appcache-demo.eaf4.com'
-  };
-
   var ENV = {
     build: {},
-    plugins: ['appshell', 'build', 'display-revisions', 'manifest', 'revision-data', 's3', 's3-index', 's3-index:s3-index-manifest', 's3-index:s3-index-appshell'],
-
-    s3: _.defaults({
-      filePattern: '**/*.{js,css,png,gif,ico,jpg,jpeg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,ttc,csv}'
-    }, s3CommonOptions),
-
-    's3-index': _.defaults({
-      allowOverwrite: true
-    }, s3CommonOptions),
-
-    's3-index-manifest': _.defaults({
-      filePattern: 'manifest.appcache',
-      allowOverwrite: true
-    }, s3CommonOptions),
-
-    's3-index-appshell': _.defaults({
-      filePattern: 'appshell.html',
-      allowOverwrite: true
-    }, s3CommonOptions),
 
     appshell: {
       excludePattern: '{robots.txt,crossdomain.xml}',
