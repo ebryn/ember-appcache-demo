@@ -7,26 +7,7 @@ module.exports = function(deployTarget) {
 
     appshell: {
       excludePattern: '{robots.txt,crossdomain.xml}',
-      externalDependencies: [
-        // Google fonts are a little slippery, you need to keep
-        // hitting the CSS endpoint with different user agents to try
-        // to flush out all the variations.
-        'http://fonts.googleapis.com/css?family=Poppins:400,700',
-        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESAzyDMXhdD8sAj6OAJTFsBI.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESBsxEYwM7FgeyaSgU71cLG0.woff',
-        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESC3USBnSvpkopQaUR-2r7iU.ttf',
-        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/Aul8cxPpbm96Ali7smyVfCEAvth_LlrfE80CYdSH47w.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/F4YWuALHubF63LLQPw0rMfY6323mHUZFJMgTvxaG2iE.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/HLBysyo0MQBO_7E-DWLwzg.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/SFusu2OSFiUt40t5QNWvnA.woff',
-        'http://fonts.gstatic.com/s/poppins/v1/TDTjCH39JjVycIF24TlO-Q.ttf',
-        'http://fonts.gstatic.com/s/poppins/v1/aDjpMND83pDErGXlVEr-SSEAvth_LlrfE80CYdSH47w.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/gG8m82oGcrBJF727xHU04fY6323mHUZFJMgTvxaG2iE.woff2',
-        'http://fonts.gstatic.com/s/poppins/v1/ePBp1XdWMQqYWkm0HYfk2gLUuEpTyoUstqEm5AMlJo4.woff',
-        'http://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESL3hpw3pgy2gAi-Ip7WPMi0.woff'
-      ],
+      externalDependencies: [],
       prefixDomains: {}
     }
   };
