@@ -1,8 +1,10 @@
 <section class="day-nav row centered collapse">
   <ul class="small-12 columns">
+  {{!--
     <li>
       <a href="#pre-conf-activities" class="active">Pre-Conf Activities</a>
     </li>
+  --}}
     <li>
       <a href="#day-1" class="">Day 1</a>
     </li>
@@ -33,10 +35,7 @@
                 </div>
               {{/if}}
               <h3>{{talk.title}}</h3>
-              <p><a href="http://emberconf.com/speakers.html#charles-lowell">{{talk.speaker}}</a></p>
-              <div class="accordion-content">
-                <p><em>Immutability</em>. It may sound like an ominous something from the far-off galaxy of math, but in practice, it's one of the most pragmatic tools for thinking about UI.</p><p>In this talk we'll explore the problems that an immutable style solves, and how you can use it as a thought-tool to both design and implement more powerful and composable components.</p><p>Throughout we'll see just how deeply Ember supports this mode of thought at every step of the way.</p>
-              </div>
+              <p>{{array-join talk.speakers ', '}}</p>
             </div>
           </div>
         {{/link-to}}
