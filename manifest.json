@@ -3,12 +3,14 @@
   "short_name": "EmberConf",
   "icons": [
     {
-      "src": "apple-touch-icon.png",
+      "src": "touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
   ],
   "start_url": "index.html",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "background_color": "#EEEBEB"
 }
