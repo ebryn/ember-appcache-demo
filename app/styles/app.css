@@ -64,6 +64,13 @@
   }
 }
 
+/* This min-width number is nuts, but matches the other ones */
+@media screen and (min-width: 64.0625em) {
+  header .logo {
+    position: absolute;
+  }
+}
+
 header .logo:after {
     content:'';
     z-index:-1;
