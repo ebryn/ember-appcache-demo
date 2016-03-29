@@ -15,7 +15,7 @@ module.exports = function(defaults) {
 
     fingerprint: {
       extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2'],
-      exclude: ['apple-touch-icon.png']
+      exclude: ['touch-icon*.png']
     },
 
     babel: {
