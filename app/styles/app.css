@@ -135,10 +135,13 @@ header .logo.reveal:after {
     margin-top: 0.75em;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
   display: none;
 }
 
+=======
+>>>>>>> Add "interested in" button, saves to local storage
 p + .is-interested-button {
     margin-top: 4px;
 }
@@ -147,7 +150,7 @@ h3 + .is-interested-button {
     margin-top: 8px;
 }
 
-.is-interested-button.nope {
+.is-interested-button.nope:not(:hover) {
     background-color: lightblue;
 }
 
