@@ -1,9 +1,10 @@
 CACHE MANIFEST
-# Mon Mar 28 2016 18:59:45 GMT-0400 (EDT)
-assets/ember-appcache-demo-b192f585b2ab4f2c1b0f7f7e6df4b059.css
-assets/ember-appcache-demo-dd5ab841c75e556fdbd687e49694e0a2.js
-assets/vendor-969bd6f07c2bff409cffe8aed5318b1d.js
-assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css
+# Tue Mar 29 2016 00:59:00 GMT-0400 (EDT)
+apple-touch-icon-cf34ae9152c4477337eec0dfaeec498b.png
+assets/ember-appcache-demo-93e341f3d45d2987ff1cf6d3ca2674a4.css
+assets/ember-appcache-demo-b9ad68060f8bff7c6754f21d7040d564.js
+assets/vendor-a68a13a4041fc46546ad03e9d10535f5.css
+assets/vendor-afab728f7f28ab99920296ff8424a39d.js
 fonts/Poppins-Bold-89124a828cd3179d84f1b60f03b0ece6.woff
 fonts/Poppins-Regular-fbec8733366f4257601ebdadcfddfaca.woff
 images/bio-alex-blom-d4d6b9cca75b3f2a0c7aff2b54e16cda.jpeg
@@ -45,5 +46,6 @@ images/emberconf-logo@2x-afb14dbdc667a8c6ba3d664f6061f32c.png
 images/tomster-89559e1ddd37d758dcba135987434342.png
 images/tomster@2x-fcdfa56168ed94dc7ffc708e7eb818aa.png
 index.html
+manifest.json
 NETWORK:
 *
