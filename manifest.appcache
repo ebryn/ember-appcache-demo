@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Tue Mar 29 2016 07:49:50 GMT-0700 (PDT)
+# Tue Mar 29 2016 08:23:12 GMT-0700 (PDT)
 apple-touch-icon.pxm
 assets/ember-appcache-demo-150cf832fa4f08f6e39d783b41a230c2.css
 assets/ember-appcache-demo-20112467acf2167ac7eb130d77a35b6d.js
@@ -49,5 +49,8 @@ images/tomster@2x-fcdfa56168ed94dc7ffc708e7eb818aa.png
 index.html
 manifest.json
 touch-icon.png
+touch-startup-image-320x460-bafdbec48452ae7810444d3af5bb3f1c.png
+touch-startup-image-750x1294-fb71dcdaf0bf9b10452649c92e400800.png
+touch-startup-image-d8fecaec47a93f6ff24b7f6fe8ec2904.png
 NETWORK:
 *
