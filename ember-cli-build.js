@@ -14,7 +14,8 @@ module.exports = function(defaults) {
     _ignoreMissingLoader: true,
 
     fingerprint: {
-      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2']
+      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2'],
+      exclude: ['apple-touch-icon.png']
     },
 
     babel: {
