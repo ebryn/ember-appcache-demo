@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Poppins'), local('Poppins-Regular'), url('../fonts/Poppins-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins'), local('Poppins-Bold'), url('../fonts/Poppins-Bold.woff') format('woff');
-}
-
 .schedule {
     display: flex;
     flex-direction: column;
