@@ -7,7 +7,7 @@
 .schedule .day-nav {
     margin-bottom: 0;
     height: 4.5em;
-    padding-top: 0;
+    padding-top: 10px;
     border-bottom: 1px solid #D2CDCC;
     position: fixed;
     z-index: 100;
@@ -18,6 +18,24 @@
 .schedule .body-container {
     margin-top: 4.5em;
     overflow: auto;
+}
+
+.back-list-item {
+    float: left;
+    margin-right: -65px !important;
+}
+
+.back-link {
+    padding: 20px;
+}
+
+.back-icon {
+    height: 24px;
+}
+
+.schedule > .liquid-container {
+    flex: 1;
+    position: relative;
 }
 
 .schedule > .liquid-container > .liquid-child {
