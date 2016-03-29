@@ -4,9 +4,9 @@
         <h2 class="centered">{{model.name}}</h2>
       </div>
     </div>
-    <ol class="row">
+    <ol class="row" onclick={{action "chooseTalk"}} >
       {{#each model.talks as |talk|}}
-        {{#link-to 'talk' model.id talk.id tagName='li' class='small-12 columns accordion'}}
+        <li class='small-12 columns accordion' data-talk-id={{talk.id}}>
           <div class="row small-collapse medium-uncollapse">
               <div class="event-time small-12 medium-4 columns">
                 <p>{{talk.time}}</p>
@@ -21,7 +21,7 @@
               <p>{{array-join talk.speakers ', '}}</p>
             </div>
           </div>
-        {{/link-to}}
+        </li>
       {{/each}}
     </ol>
 
