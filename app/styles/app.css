@@ -105,3 +105,26 @@ header .logo.reveal:after {
     height: 120px;
     margin-top: 0.75em;
 }
+
+p + .is-interested-button {
+    margin-top: 4px;
+}
+
+h3 + .is-interested-button {
+    margin-top: 8px;
+}
+
+.is-interested-button.nope {
+    background-color: lightblue;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
