@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('talks', { path: '/' });
+  this.route('day', { path: '/day/:dayId' });
   this.route('talk', { path: 'talk/:day/:talkId' });
 });
 

@@ -1,29 +1,12 @@
-<section class="day-nav row centered collapse">
-  <ul class="small-12 columns">
-  {{!--
-    <li>
-      <a href="#pre-conf-activities" class="active">Pre-Conf Activities</a>
-    </li>
-  --}}
-    <li>
-      <a href="#day-1" class="">Day 1</a>
-    </li>
-    <li>
-      <a href="#day-2" class="">Day 2</a>
-    </li>
-  </ul>
-</section>
 <section class="day">
-  {{#each model as |day|}}
-    <div class="row" id={{day.id}}>
+    <div class="row" id={{model.id}}>
       <div class="small-12 columns">
-        <h2 class="centered">{{day.name}}</h2>
-        <!-- <p class="centered">Join us for (optional) Day 1, featuring trainings, local activities, and early registration.</p> -->
+        <h2 class="centered">{{model.name}}</h2>
       </div>
     </div>
     <ol class="row">
-      {{#each day.talks as |talk|}}
-        {{#link-to 'talk' day.id talk.id tagName='li' class='small-12 columns accordion'}}
+      {{#each model.talks as |talk|}}
+        {{#link-to 'talk' model.id talk.id tagName='li' class='small-12 columns accordion'}}
           <div class="row small-collapse medium-uncollapse">
               <div class="event-time small-12 medium-4 columns">
                 <p>{{talk.time}}</p>
@@ -41,5 +24,5 @@
         {{/link-to}}
       {{/each}}
     </ol>
-  {{/each}}
+
 </section>

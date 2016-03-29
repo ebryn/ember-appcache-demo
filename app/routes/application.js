@@ -4,180 +4,6 @@ export default Ember.Route.extend({
   model() {
     let json = [
       {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Registration Windows",
-        "speakers": [],
-        "time": "",
-        "description": "\n              \n            ",
-        "id": "registration-windows"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Training Only",
-        "speakers": [],
-        "time": "8:30–9:30am",
-        "description": "\n              <p>This registration window is reserved for folks attending one of our four training classes, to make sure they're processed and seated in time for class.</p>\n            ",
-        "id": "training-only"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Training, Activities and Early Conference",
-        "speakers": [],
-        "time": "9:30am–5:00pm",
-        "description": "\n              <p>All attendees are welcome to drop by to register for any EmberConf trainings, activities, and for early Conference registration. </p><p>While supplies last, we've got a special swag item for folks registering for anything on Monday, to help keep the Tuesday morning registration rush to a minimum.</p>\n            ",
-        "id": "training,-activities-and-early-conference"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Trainings",
-        "speakers": [],
-        "time": "",
-        "description": "\n              \n            ",
-        "id": "trainings"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "A: Intermediate Ember\n              $\n              !",
-        "speakers": [
-          "Nate Bibler"
-        ],
-        "imageUrl": "images/bio-nate-bibler.jpeg",
-        "time": "9:00am–12:30pm",
-        "description": "\n              <p>This is a live training session of Code School's Ember screencasts (video walkthroughs of practical steps for building applications) that follow up the Try Ember course launched in late February. This course teaches Ember application development using the current versions of Ember and Ember CLI. Participating in a live training session gives you the opportunity to ask questions and get personalized feedback from our experts and support staff.</p><p>This course targets early-to-intermediate Ember developers who are looking to learn and use application testing techniques, create Handlebars helpers, integrate with Ember addons, develop custom components, and, most importantly, work with Ember Data.</p><p>Like Code School courses, this session is broken into small, focused, and comfortably consumable sections. Each section presents a new set of concepts and techniques. Following each section’s training portion, you will immediately use what you've learned to solve various coding and concept challenges.</p><p>It is expected that you come to this training session with an understanding of the basic concepts within Ember (the router, routes, templates, models, and components). If you're not there yet, be sure to get familiar with these concepts on your own or by completing Code School's Try Ember course.</p><p>Ticket price of $299, space limited.</p>\n            ",
-        "id": "a:-intermediate-ember"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "B: Test-Driven Ember\n              $\n              !",
-        "speakers": [
-          "Toran Billups"
-        ],
-        "imageUrl": "images/bio-toran-billups.jpeg",
-        "time": "–",
-        "description": "\n              <p>This workshop is designed to provide both the beginner and intermediate JavaScript developer in the Ember ecosystem with a solid understanding of test-driven-development. If you're familiar with the concepts behind testing or test-driven-development but you haven't yet applied them in your daily work this course will transform you into a more confident software engineer by working through several hours of live coding.</p><p>We start with the basics (<code>ember-cli</code>, <code>testem</code>, <code>ember-qunit</code>) and quickly move into writing real software. Each section has both a lecture and hands-on lab to get you comfortable with the idea that testing can be a powerful feedback tool.</p><p>Expert level JS/Ember experience is <em>not</em> required, but because the workshop is only a few hours we won't have enough time to teach the very basics of the language—so make sure you've got that knowledge in advance. In addition, familiarity with <code>ember-cli</code> will be beneficial as each hands-on lab includes writing features and/or fixing bugs with the command line tooling.</p><p><strong>Introduction</strong><br></p><ul><li>What is 'test-driven' and why should you care?</li><li>A quick overview of <code>ember-cli</code> / <code>testem</code></li><li>Unit testing with <code>qunit</code></li><li>Integration testing with <code>ember-qunit</code></li><li>Acceptance testing with ember-testing</li></ul><strong>Outside-In TDD</strong><ul><li>Start acceptance testing the new feature</li><li>Discuss test friction and how to 'listen' for it</li><li>Integration testing the web component in isolation</li><li>Redefine 'unit test' as we decompose the data modeling requirement</li></ul><strong>The Feedback Loop in Action</strong><ul><li>Describe a production bug that has crept into the system</li><li>Deep dive on the thought process as we sift through routes/services/components</li><li>Use advanced techniques like <code>pauseTest()</code> and <code>done()</code> to get feedback in the browser</li></ul><strong>Advanced Techniques</strong><ul><li>Writing a custom async helper for file upload</li><li>What registration and injection look like without the helpers</li><li>How to extend qunit when necessary</li></ul><p>Ticket price of $299, class size limited to 15 students.</p><p></p>\n            ",
-        "id": "b:-test-driven-ember"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "E: Intermediate and Advanced Ember Data (New Session)\n              $",
-        "speakers": [
-          "Igor Terzic",
-          "Brendan McLoughlin"
-        ],
-        "imageUrl": "images/bio-igor-terzic.jpg",
-        "time": "–",
-        "description": "\n              <p>This class was just added by the instructors due to popular demand. It's a second session of afternoon Training D; scroll down to that entry to find the details.</p>\n            ",
-        "id": "e:-intermediate-and-advanced-ember-data-(new-session)"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "C: Building Stateful UI\n              $\n              !",
-        "speakers": [
-          "Stefan Penner",
-          "Mike North"
-        ],
-        "imageUrl": "images/bio-stef-penner.jpg",
-        "time": "1:30–5:00pm",
-        "description": "\n              <p>This training will be delivered by Stefan Penner, Ember Core Team member and the creator of <code>ember-cli</code>.</p><p>This workshop is designed for both the intermediate and advanced Ember.js developer. Understanding of core Ember.js concepts is assumed, as we plan to cover more advanced topics.</p><p>As we know, Ember.js aims to enable developers by giving them leverage of an entire ecosystem. This workshop aims to build on that foundation by distilling advanced patterns used in real life ambitious applications into a series of lab like exercises, discussions and lessons.</p><p>In the real world, latency is variable, requests fail, the features are due Tuesday and users still expect a good experience. Attendees should come away from this training enabled, and confident to tackle advanced user interfaces, without succumbing to excess complexity.</p><p>As such, the general theme will revolve around building reliable state-full user interface, while keeping implementations idiomatic, maintainable and most importantly enjoyable.</p><p></p><p><strong>High Level Topics</strong></p><ul><li>TDD/Maintainability</li><li>Ephemeral and Persistent State</li><li>Asynchrony/Latency</li><li>Rich user experiences</li><li>Reliability in the face of failure</li><li>Keeping complexity low and productivity high</li></ul><p><strong>Expectations</strong></p><ul><li>Intermediate to advanced Ember.js knowledge</li><li>Laptop with working installation of <code>ember-cli</code> (latest stable version) and <code>npm</code></li><li>Pair programming encouraged!</li></ul><p>Ticket price of $299, class size limited to 30 students.</p><p></p>\n            ",
-        "id": "c:-building-stateful-ui"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "D: Intermediate and Advanced Ember Data\n              $\n              !",
-        "speakers": [
-          "Igor Terzic",
-          "Brendan McLoughlin"
-        ],
-        "imageUrl": "images/bio-igor-terzic.jpg",
-        "time": "–",
-        "description": "\n              <p>This training will be delivered by Igor Terzic, an Ember core team member with TA support by Brendan McLoughlin, an Ember Data core team member.</p><p>The training is designed to get Ember developers more comfortable with customizing their Ember Data adapters and serializers and help them handle one off issues they might encounter when dealing with strange APIs in the wild. It will help both developers who need to modify their apps to work with APIs which are not fully JSON API compliant as well as aspiring adapter authors.</p><p>When you finish this training you will be able to quickly get going with Ember Data using your own adapter for custom backend APIs. And even if you still use the <code>JSONAPIAdapter</code>, you will have a better understanding of how it works and will have learned multiple techniques for quickly solving common issues and customizing for the specific quirks of your backend.</p><p>In the first part of this training you will go through a series of exercises which will guide you through writing a basic Ember Data adapter from scratch. This will expose you to the high level adapter APIs and help you understand how the production ready JSON API Adapter works.</p><p>The second part of the training will focus on using the knowledge gained from writing the adapter from the ground up and applying it to customizing the JSON API Adapter. We will show several common techniques for modifying the JSON API Adapter in order to solve complex issues when dealing with APIs which are not fully JSON API compliant.</p><p>This training assumes basic to intermediate knowledge and experience using Ember as well as a familiarity with using Ember Data.</p><p>Ticket price of $299, class size limited to 30. Proceeds of this class will be directed towards funds for conference speakers.</p>\n            ",
-        "id": "d:-intermediate-and-advanced-ember-data"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Walking Tours",
-        "speakers": [],
-        "time": "",
-        "description": "\n              \n            ",
-        "id": "walking-tours"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Epicurean Extravaganza\n              $\n              !",
-        "speakers": [],
-        "time": "10:30am–2:00pm",
-        "description": "\n              <p>Discover Portland's amazing culinary scene, complete with food and drink tastes along the way. If you watch the Food Network and/or consider yourself a foodie, this is the morning activity for you.</p><p>Portland has become a go-to destination for people who love to eat and our experienced Tour Guide will show you why. You'll sample from the best local artisan items that Oregon has to offer. The tour will visit between 7 and 9 different local vendors and artisan producers in roughly 3.5 hours.</p><p>Ticket price of $79 covers all the snacks and samples along the way, as well as a gratuity for your tour guide. Rain or shine.</p>\n            ",
-        "id": "epicurean-extravaganza"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Food Cart Flavor Street\n              $",
-        "speakers": [],
-        "time": "1:30–3:30pm",
-        "description": "\n              <p>Check out Portland’s amazing curbside cuisine! Let our Resident Experts take you on a personal tour of the city’s best food carts, tasting trucks, and hidden kitchens, where former four-star chefs and other culinary entrepreneurs scoop up mighty morsels on an international scale. This isn’t fast food: it’s flavor with flair, for savvy munchers on the go.</p><p><br>With so much to choose from, it’s easy to make a mealtime mistake you’ll regret all week. Our personable, knowledgeable local expert guides will help you navigate the crowds and show you which meals are deals, and which queues to avoid. Along the way they’ll share the story behind the phenomenon that has changed city streets and parking lots into hip places for a posh nosh. You’ll never look at street vendors the same way!</p><p>Ticket price of $79 covers all the snacks and samples along the way, as well as a gratuity for your tour guide. Rain or shine.</p>\n            ",
-        "id": "food-cart-flavor-street"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "The Brewer and the Chef\n              $",
-        "speakers": [],
-        "time": "2:00–8:30pm",
-        "description": "\n              <p>Join an intimate group of your fellow Ember friends (14 max, to be specific) for a food/foodie-focused adventure in Northeast Portland. We'll take a guided tour walking to and from three iconic Portland Breweries, complete with snacks and tastings (included). </p><p>After that, we'll walk to a nearby kitchen/private dining room for a fabulous cooking class, where you'll spend time preparing and then eating a fantastic foodie-approved dinner. Who said you can only learn about Ember at EmberConf?</p><p>Ticket price of $199 covers all tours, brewery tasting beer and snacks, cooking instruction and dinner with dessert.</p><p>We promise, it's going to be good! Dinner will be a Moroccan feast, which should finish the day of drinking and snacking nicely. The menu:<br></p><ul><li>Moroccan spice pastry with beef or lamb, cinnamon, raisins and pine nuts</li><li>Parsley Salad</li><li>Tagine of chicken with melting onions, saffron, preserved lemon and green olives over cous cous</li><li>Beet, olive oil and spice cake</li><li>Poached apricots stuffed with mascarpone and pistachio</li><li>and a nice Pinot Noir pairing</li></ul><br>And the three Breweries we'll be visiting are:<ul><li>Ecliptic</li><li>StormBreaker</li><li>Hopworks BikeBar</li></ul><p>The Brewery Tour will be led buy a super fun guide and include tastings at each location, snacks along the way, a tasting journal and a souvenir glass.</p><p>As with all EmberConf activities that involve alcohol, drink responsibly! Don't overdo it: we'll also provide lots of snacks along the way to help make sure you don't. Rain or shine.</p><p></p>\n            ",
-        "id": "the-brewer-and-the-chef"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Other Activities",
-        "speakers": [],
-        "time": "",
-        "description": "\n              \n            ",
-        "id": "other-activities"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Contributors Workshop\n              $",
-        "speakers": [
-          "Matthew Beale",
-          "Cory Forsyth"
-        ],
-        "imageUrl": "images/bio-matt-beale.png",
-        "time": "10:00am–5:00pm",
-        "description": "\n              <p>Ember stands on the shoulders of hundreds of contributors. Some land a small bugfix, and others refactor entire APIs. Some write documentation or improve CI reliability, and yet other help with deployment and automation. All of them started small before making a larger contribution.</p><p>Join us for a loosely structured day of hacker hours and instruction that will include presentations on how to make a PR to Ember, tutorials on how to contribute to documentation, and everything you need to know about how to collaborate on RFCs.</p><p>This Workshop is sponsored by 201 Created, and the $29 registration fee will go toward conference scholarship programs.</p><p>Lunch will be served.</p>\n            ",
-        "id": "contributors-workshop"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "WHW Public Speaking 101\n              $\n              !",
-        "speakers": [
-          "Bear Douglas",
-          "Details on the WHW program."
-        ],
-        "imageUrl": "images/bio-bear-douglas.jpg",
-        "time": "9:00am–12:00pm",
-        "description": "\n              <p>This Workshop is open to members of the EmberConf <em>Women Helping Women</em> Program.</p><p>This fun workshop is a mix of lecture, exercises, and discussion, focused on practical techniques and principles that can help you level up your skills for speaking to any size of group. Learn how to adapt your body language and content to communicate effectively to dozens, hundreds, or thousands of people—and how to recover when things don’t go as planned.</p><p><a href=\"/women-helping-women.html\">Details on the WHW program.</a></p>\n            ",
-        "id": "whw-public-speaking-101"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "WHW Program Luncheon\n              $\n              !",
-        "speakers": [
-          "DockYard",
-          "Fastly",
-          "Details on the WHW program."
-        ],
-        "time": "12:30–2:00pm",
-        "description": "\n              <p>This private luncheon is open to members of the EmberConf <em>Women Helping Women</em> Program, and is sponsored by our friends at <a href=\"https://dockyard.com/ember-consulting\">DockYard</a> and <a href=\"http://fastly.us/1OHvuGw\">Fastly</a>.</p><p><a href=\"/women-helping-women.html\">Details on the WHW program.</a></p>\n            ",
-        "id": "whw-program-luncheon"
-      },
-      {
-        "day": "Pre-Conf Activities: March 28",
-        "title": "Mentorship Program Meet n' Greet",
-        "speakers": [],
-        "time": "6:00–7:30pm",
-        "description": "\n              <p>This private wine-and-cheese mixer is for members of the EmberConf Mentorship Program. Applications to the program opened and closed in early March.</p>\n            ",
-        "id": "mentorship-program-meet-n'-greet"
-      },
-      {
         "day": "Day 1: March 29",
         "title": "Registration",
         "speakers": [],
@@ -576,15 +402,11 @@ export default Ember.Route.extend({
       }
     ];
     let grouped = [{
-      id: 'pre-conf-activities',
-      name: "Pre-Conf Activities: March 28",
-      talks: []
-    }, {
-      id: 'day-1',
+      id: '1',
       name: "Day 1: March 29",
       talks: []
     }, {
-      id: 'day-2',
+      id: '2',
       name: "Day 2: March 30",
       talks: []
     }];
@@ -593,6 +415,6 @@ export default Ember.Route.extend({
       talk.id = talk.title.split('\n')[0].dasherize().toLowerCase();
       grouped.findBy('name', talk.day).talks.push(talk);
     }
-    return grouped.splice(1);
+    return grouped;
   }
 });
