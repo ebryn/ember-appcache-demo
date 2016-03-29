@@ -99,6 +99,12 @@ header .logo.reveal:after {
     }
 }
 
+@media screen and (min-width: 40.0625em) {
+  h2 {
+    margin: 0 230px;
+  }
+}
+
 .talk {
     display: flex;
     flex-direction: column;
