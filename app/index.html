@@ -24,7 +24,14 @@
   <body>
     {{content-for "body"}}
 
+    <!--
+         This is here because if our appshell tries to swap us in to
+         replace an earlier version, the babel polyfill in vendor.js
+         will explode when it sees another copy had already
+         loaded.
+      -->
     <script type="text/javascript">delete window._babelPolyfill</script>
+
     <script src="assets/vendor.js"></script>
     <script src="assets/ember-appcache-demo.js"></script>
 
