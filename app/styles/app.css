@@ -73,3 +73,18 @@ header .logo.reveal:after {
         background-size:100% auto
     }
 }
+
+.talk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.talk > p {
+    margin: 0.75em;
+}
+
+.talk img {
+    width: 120px;
+    margin: 0.75em;
+}

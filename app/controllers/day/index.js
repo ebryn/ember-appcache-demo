@@ -6,7 +6,7 @@ export default Controller.extend({
     chooseTalk(event) {
       let talkId = $(event.target).closest('li').data('talk-id');
       if (talkId) {
-        this.transitionToRoute('talk', this.get('model.id'), talkId);
+        this.transitionToRoute('day.talk', this.get('model.id'), talkId);
       }
     }
   }

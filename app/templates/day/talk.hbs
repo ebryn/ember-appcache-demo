@@ -1,0 +1,13 @@
+{{#with model as |talk|}}
+  <section class="day talk">
+    <p>{{talk.time}}</p>
+    {{#if talk.imageUrl}}
+      <img src="{{talk.imageUrl}}" alt={{talk.title}} class="round">
+    {{/if}}
+    <h3>{{talk.title}}</h3>
+    <p>{{array-join talk.speakers ', '}}</p>
+    <div>
+      {{{talk.description}}}
+    </div>
+  </section>
+{{/with}}
