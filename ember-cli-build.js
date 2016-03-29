@@ -14,7 +14,7 @@ module.exports = function(defaults) {
     _ignoreMissingLoader: true,
 
     fingerprint: {
-      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2'],
+      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg'],
       exclude: ['touch-icon*.png']
     },
 
