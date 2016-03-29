@@ -1,28 +1,32 @@
-<section class="day">
-    <div class="row" id={{model.id}}>
-      <div class="small-12 columns">
-        <h2 class="centered">{{model.name}}</h2>
-      </div>
-    </div>
-    <ol class="row" onclick={{action "chooseTalk"}} >
-      {{#each model.talks as |talk|}}
-        <li class='small-12 columns accordion' data-talk-id={{talk.id}}>
-          <div class="row small-collapse medium-uncollapse">
-              <div class="event-time small-12 medium-4 columns">
-                <p>{{talk.time}}</p>
-              </div>
-            <div class="event-info small-12 medium-8 columns">
-              {{#if talk.imageUrl}}
-                <div class="img wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
-                  <img src="{{talk.imageUrl}}" alt={{talk.title}} class="round">
-                </div>
-              {{/if}}
-              <h3>{{talk.title}}</h3>
-              <p>{{array-join talk.speakers ', '}}</p>
-            </div>
-          </div>
-        </li>
-      {{/each}}
-    </ol>
+{{#illiquid-model model as |day|}}
+  {{the-logo}}
 
-</section>
+  <section class="day">
+      <div class="row" id={{day.id}}>
+        <div class="small-12 columns">
+          <h2 class="centered">{{day.name}}</h2>
+        </div>
+      </div>
+      <ol class="row" onclick={{action "chooseTalk"}} >
+        {{#each day.talks as |talk|}}
+          <li class='small-12 columns accordion' data-talk-id={{talk.id}}>
+            <div class="row small-collapse medium-uncollapse">
+                <div class="event-time small-12 medium-4 columns">
+                  <p>{{talk.time}}</p>
+                </div>
+              <div class="event-info small-12 medium-8 columns">
+                {{#if talk.imageUrl}}
+                  <div class="img wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                    <img src="{{talk.imageUrl}}" alt={{talk.title}} class="round">
+                  </div>
+                {{/if}}
+                <h3>{{talk.title}}</h3>
+                <p>{{array-join talk.speakers ', '}}</p>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+
+  </section>
+{{/illiquid-model}}

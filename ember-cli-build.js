@@ -15,6 +15,10 @@ module.exports = function(defaults) {
 
     fingerprint: {
       extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'map', 'svg', 'ttf', 'woff', 'eot', 'ttc', 'woff2']
+    },
+
+    babel: {
+      includePolyfill: true
     }
   });
 
