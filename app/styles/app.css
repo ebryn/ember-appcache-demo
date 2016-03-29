@@ -39,6 +39,24 @@
     position: absolute;
 }
 
+.schedule > .liquid-container > .liquid-child > .liquid-container {
+    height: 100%;
+    width: 100%;
+}
+
+.schedule > .liquid-container > .liquid-child > .liquid-container > .liquid-child {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.memory-scroll {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* Disable hover on mobile devices */
 @media (hover:none) {
   .schedule ol li div.row:hover {
@@ -90,7 +108,12 @@ header .logo.reveal:after {
     margin: 0.75em;
 }
 
+.talk h3 {
+    margin-top: 0.75em;
+}
+
 .talk img {
     width: 120px;
-    margin: 0.75em;
+    height: 120px;
+    margin-top: 0.75em;
 }

@@ -44,7 +44,8 @@
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
-    "liquid-fire": "0.23.0"
+    "liquid-fire": "ember-animation/liquid-fire#c7010b0795c33f17ed07582ffb952ff853f213ac",
+    "memory-scroll": "0.2.0"
   },
   "ember-addon": {
     "paths": []
