@@ -6,41 +6,30 @@
 
 .schedule .day-nav {
     margin-bottom: 0;
-    height: auto;
+    height: 4.5em;
     padding-top: 0;
     border-bottom: 1px solid #D2CDCC;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
 }
 
-
-.schedule > .liquid-container {
-    flex: 1;
-    position: relative;
+.schedule .body-container {
+    margin-top: 4.5em;
+    overflow: auto;
 }
 
 .schedule > .liquid-container > .liquid-child {
-    height: 100%;
     width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    position: absolute;
 }
 
 .schedule > .liquid-container > .liquid-child > .liquid-container {
-    height: 100%;
     width: 100%;
 }
 
 .schedule > .liquid-container > .liquid-child > .liquid-container > .liquid-child {
-    height: 100%;
     width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-}
-
-.memory-scroll {
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 /* Disable hover on mobile devices */
