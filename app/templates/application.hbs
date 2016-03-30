@@ -1,6 +1,13 @@
 <div class="schedule">
   <section class="day-nav row centered collapse">
     <ul class="small-12 columns">
+      {{#unless isHome}}
+        <li class="back-list-item">
+          {{#link-to "index" class="back-link"}}
+            <img src="images/back-arrow.svg" class="back-icon" />
+          {{/link-to}}
+        </li>
+      {{/unless}}
       <li>
         {{#link-to "day" 1}}Day 1{{/link-to}}
       </li>
