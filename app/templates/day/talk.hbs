@@ -1,8 +1,6 @@
 {{#with model as |talk|}}
 <section class="day talk">
 
-  <span class='icon close' {{action 'goBack'}}>X</span>
-
   {{#if talk.imageUrl}}
     <img src="{{talk.imageUrl}}" alt={{talk.title}} class="round" data-photo-id={{talk.id}}>
   {{/if}}
