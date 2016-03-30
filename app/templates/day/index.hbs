@@ -23,7 +23,10 @@
                     </div>
                   {{/if}}
                   <h3>{{talk.title}}</h3>
-                  <p>{{array-join talk.speakers ', '}}</p>
+                  {{#if talk.speakers.length}}
+                    <p>{{array-join talk.speakers ', '}}</p>
+                  {{/if}}
+                  {{is-interested-button talkId=talk.id}}
                 </div>
               </div>
             </li>

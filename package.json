@@ -51,5 +51,8 @@
   },
   "ember-addon": {
     "paths": []
+  },
+  "dependencies": {
+    "ember-local-storage": "^1.1.0"
   }
 }
