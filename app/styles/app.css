@@ -135,13 +135,6 @@ header .logo.reveal:after {
     margin-top: 0.75em;
 }
 
-<<<<<<< HEAD
-::-webkit-scrollbar {
-  display: none;
-}
-
-=======
->>>>>>> Add "interested in" button, saves to local storage
 p + .is-interested-button {
     margin-top: 4px;
 }
